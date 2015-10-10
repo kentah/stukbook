@@ -1,5 +1,3 @@
 == Stukbook
 
 This is a coding social network based on the stuk.io tutorial series.
-
-editing file under the kh_readme branch
