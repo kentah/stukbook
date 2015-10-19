@@ -49,6 +49,8 @@ group :development, :test do
   gem 'devise'
 
   gem 'gravatarify', '~> 3.0.0'
+
+  gem 'public_activity'
   
 end
 
