@@ -18,8 +18,8 @@ class UsersController < ApplicationController
   
   def show
     @post = Post.new
-    @posts = @user.posts
-    @activities = PublicActivity::Activity.where(owner_id: @user.id) + PublicActivity::Activity.where(recipient_id: @user.id)
+    @posts = @user.posts.order('created_at DESC')
+    @activities = PublicActivity::Activity.where(owner_id: @user.id).order('created_at DESC')
   end
 
   private
@@ -27,4 +27,5 @@ class UsersController < ApplicationController
   def set_user
     @user = User.find_by(username: params[:id])
   end
+  
 end
